@@ -1,12 +1,16 @@
+import { Route, Routes } from "react-router-dom";
+import { About, Home, Store } from "./pages";
+import { Navbar } from "./components";
+
 function App() {
   return (
     <>
-      <h1 className="flex text-3xl font-bold text-red-500 underline">
-        Hello world!
-      </h1>
-      <h1 className="flex text-3xl font-bold text-red-500 underline">
-        Hello world 2!
-      </h1>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/store" element={<Store />}></Route>
+        <Route path="/about" element={<About />}></Route>
+      </Routes>
     </>
   );
 }

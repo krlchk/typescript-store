@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop ASUS VivoBook",
+    "price": 799.99,
+    "imgsUrl": "/imgs/laptop1-1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Smartphone Samsung Galaxy S23",
+    "price": 999.99,
+    "imgsUrl": "/imgs/phone1-1.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Wireless Headphones Sony WH-1000XM4",
+    "price": 349.99,
+    "imgsUrl": "/imgs/headphones1-1.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Gaming Mouse Logitech G502",
+    "price": 89.99,
+    "imgsUrl": "/imgs/mouse1-1.jpg"
+  }
+]
