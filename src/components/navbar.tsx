@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { BasketIcon } from "../assets";
+import { useShoppingCart } from "../context/shopping-cart-context";
 
 export function Navbar() {
+  const { openCart, cartQuantity } = useShoppingCart();
   return (
     <div className="sticky flex p-7 text-3xl font-semibold shadow-lg">
       <div className="me-auto flex gap-10">
@@ -15,12 +17,14 @@ export function Navbar() {
           About
         </Link>
       </div>
-      <button className="relative">
-        <BasketIcon />
-        <div className="absolute flex h-5 w-5 -translate-y-3 translate-x-6 items-center justify-center rounded-full bg-red-500 text-base text-white">
-          3
-        </div>
-      </button>
+      {cartQuantity > 0 && (
+        <button onClick={openCart} className="relative">
+          <BasketIcon />
+          <div className="absolute flex h-5 w-5 -translate-y-3 translate-x-6 items-center justify-center rounded-full bg-red-500 text-base text-white">
+            {cartQuantity}
+          </div>
+        </button>
+      )}
     </div>
   );
 }
